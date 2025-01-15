@@ -1,0 +1,376 @@
+@use 'variables' as *;
+
+@font-face {
+    font-family: "cairoFont";
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+
+body {
+    font-family: "cairoFont", 'Cambria, Cochin, Georgia, Times, Times New Roman, serif' !important;
+    cursor: default;
+}
+
+.container-fluid {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    overflow-x: hidden;
+}
+
+.custom-btn {
+    padding: 10px 20px;
+    color: $main-color !important;
+    border: 1px solid $main-color !important;
+    font-weight: bold !important;
+
+    &:hover,
+    &:focus {
+        color: $secondary-color !important;
+        background-color: $main-color !important;
+        border: 1px solid $main-color !important;
+    }
+}
+
+.custom-btn-main {
+    padding: 20px;
+    background-color: $main-color !important;
+    color: $fourth-color;
+    font-weight: bold;
+    width: 250px;
+
+    &:hover {
+        color: #000;
+    }
+}
+
+.project-details {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.top-menu {
+    .navbar {
+        font-weight: bold;
+        padding: 0 100px !important;
+        background-color: $main-color !important;
+
+        button.navbar-toggler {
+            color: $secondary-color;
+            margin: 5px;
+        }
+
+        a.navbar-brand {
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        .navbar-nav {
+            li > a {
+                transition-property: background-color;
+                transition-duration: 0.5s;
+                color: $secondary-color;
+
+                &:hover {
+                    color: $main-color !important;
+                    background-color: $secondary-color;
+                    border-bottom: 1px solid $main-color;
+                }
+            }
+        }
+    }
+}
+
+.carousel-top {
+    .row {
+        display: block !important;
+    }
+
+    .carousel {
+        .carousel-item {
+            img {
+                height: 450px;
+            }
+
+            .overlay {
+                position: absolute;
+                background-color: rgba($color: $main-color, $alpha: 0.5);
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                display: flex !important;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 1;
+            }
+        }
+
+        .carousel-indicators {
+            button {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                margin: 20px 5px 0px 0px;
+
+                &.active {
+                    background-color: $main-color;
+                }
+            }
+        }
+
+        .carousel-caption {
+            h1 {
+                font-weight: bold;
+                color: $fourth-color;
+                margin-bottom: 50px;
+            }
+
+            p {
+                width: 60%;
+                color: $secondary-color;
+                font-size: 200%;
+            }
+        }
+    }
+}
+
+.who-are-we {
+    .custom-pargraph {
+        line-height: 2em;
+    }
+
+    .company-name {
+        color: $main-color;
+    }
+}
+
+.latest-projects {
+    background-color: #ffffcc;
+
+    #home-projects-carousel {
+        width: 80%;
+
+        .h-projects-thumbnail {
+            position: relative;
+            margin-bottom: 20px;
+            margin-top: 20px;
+
+            .h-projects-caption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-color: rgba(65, 155, 155, 0.5);
+                max-width: 100%;
+                height: 100%;
+                text-align: center;
+                color: #fff !important;
+                display: none;
+                background-color: rgba($color: $main-color, $alpha: 0.75);
+            }
+
+            .h-projects-category {
+                position: absolute;
+                right: 0;
+                top: 5%;
+                font-weight: bold;
+                background-color: rgba(240, 240, 240, 0.75);
+                padding: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                box-shadow: 0px 5px 20px 0px #202020;
+            }
+        }
+
+        button.carousel-control-next {
+            position: absolute;
+            left: -5%;
+            color: #252525;
+            width: 0;
+        }
+
+        button.carousel-control-prev {
+            position: absolute;
+            right: -6%;
+            color: #252525;
+            width: 0;
+        }
+    }
+}
+
+.said-about-company {
+    .carousel-item {
+        .custom-img {
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        h4 {
+            font-weight: bold;
+            font-size: 150%;
+        }
+    
+        .custom-paragraph {
+            line-height: 2em;
+            font-size: 150%;
+        }
+    }
+
+    button.carousel-control-next {
+        position: absolute;
+        left: 7%;
+        color: #252525;
+        width: 0;
+    }
+
+    button.carousel-control-prev {
+        position: absolute;
+        right: 7%;
+        color: #252525;
+        width: 0;
+    }
+}
+
+.clients {
+    background-color: $main-color;
+}
+
+.latest-posts {
+    .card-body {
+        width: 90%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        position: relative;
+        background-color: $fourth-color;
+        top: -17px;
+        left: -5%;
+    }
+
+    .card-title {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+}
+
+footer {
+    height: 450px;
+    background-color: $third-color;
+    
+    h2 {
+        font-size: 150%;
+        color: $secondary-color;
+    }
+
+    .line1 {
+        width: 5%;
+        border-top: 3px solid $secondary-color;
+        margin: 15px auto;
+        opacity: 1;
+    }
+
+    #footer-nav-links {
+        a {
+            text-decoration: none;
+            color: #bbb;
+            margin-right: 15px;
+            font-size: 90%;
+
+            &:hover,
+            &:focus {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    .line2 {
+        width: 60%;
+        border-top: 3px solid $secondary-color;
+        margin: 15px auto;
+        opacity: 1;
+    }
+
+    .form {
+        margin-right: 48px;
+        margin-left: 48px;
+
+        input {
+            background-color: #202020;
+            border-radius: 1px;
+            border-color: $secondary-color;
+            color: $secondary-color;
+            text-align: right;
+
+            &:focus {
+                box-shadow: 0 0 2px 0 $secondary-color;
+                border-color: $secondary-color;
+                background-color: #202020;
+                color: $secondary-color;
+            }
+
+            button {
+                &:hover,
+                &:focus {
+                    color: $secondary-color !important;
+                    background-color: #363636 !important;
+                    border: 1px solid $secondary-color;
+                    transition-property: border, color, background-color;
+                    transition-duration: 0.5s;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        color: #969696;
+        font-size: 90%;
+        font-weight: bold;
+    }
+
+    .copyright-link {
+        text-decoration: none !important;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: $secondary-color;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .top-menu {
+        .navbar {
+            padding: 0px 20px !important;
+
+            .navbar-nav {
+                li > a {    
+                    border-bottom: none !important;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-top {
+        .carousel {
+            .carousel-caption {
+                h1 {
+                    font-size: 30px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

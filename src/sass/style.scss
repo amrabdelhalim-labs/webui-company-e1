@@ -2,6 +2,8 @@
 
 @forward './projects.scss';
 @forward './blog.scss';
+@forward './about.scss';
+@forward './contact.scss';
 
 @font-face {
     font-family: "cairoFont";
@@ -78,9 +80,14 @@ body {
 
                 &:hover {
                     color: $main-color !important;
-                    background-color: $secondary-color;
-                    border-bottom: 1px solid $main-color;
+                    background-color: $fourth-color;
                 }
+            }
+
+            a.active {
+                color: $main-color !important;
+                background-color: $secondary-color !important;
+                border-bottom: 1px solid $main-color !important;
             }
         }
     }
@@ -142,8 +149,9 @@ body {
 }
 
 .who-are-we {
-    .custom-pargraph {
+    .custom-paragraph {
         line-height: 2em;
+        font-size: 130%;
     }
 
     .company-name {
@@ -379,8 +387,8 @@ footer {
 
     footer {
         .form {
-            margin-right: 25%;
-            margin-left: 25%;
+            margin-right: 10%;
+            margin-left: 10%;
         }
     }
 }

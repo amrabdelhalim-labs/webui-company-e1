@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شركة عربي | إضافة تدوينة</title>
+    <title>شركة عربي | تواصل معنا</title>
 </head>
 <body>
     <div class="container-fluid">
@@ -31,10 +31,10 @@
                                     <a class="nav-link" href="projects.html">مشاريعنا</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="blog.html">المدونة</a>
+                                    <a class="nav-link" href="blog.html">المدونة</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">تواصل معنا</a>
+                                    <a class="nav-link active" aria-current="page" href="contact.html">تواصل معنا</a>
                                 </li>
                             </ul>
                         </div>
@@ -43,44 +43,58 @@
             </div>
         </section>        
 
-        <section class="banner banner-blog">
+        <section class="banner banner-contact">
             <div class="row">
                 <div class="col-12">
                     <div id="banner-img">
                         <div class="overlay">
-                            <h1 class="title1">إضافة تدوينة</h1>
+                            <h1 class="title1">تواصل معنا</h1>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="add-blog mt-4 mb-4">
+        <section class="contact-us mt-5 mb-4">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-lg-7">
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <div id="contact-info">
+                            <p>
+                                <i class="fa fa-map-marker"></i> العنوان: القاهرة الكبرى، بالعاشر من رمضان
+                            </p>
+                            <p>
+                                <i class="fa fa-phone"></i> 002 01- --- -- ---
+                            </p>
+                            <p>
+                                <i class="fa fa-envelope"></i> info@example.com
+                            </p>
+                        </div>
+                        <hr>
+                        <h5 class="mb-3">تابعنا على شبكات التواصل الاجتماعية</h5>
+                        <a class="linkedin-social one-social float-start rounded-circle" href="#"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a class="twitter-social one-social float-start rounded-circle" href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a class="facebook-social one-social float-start rounded-circle" href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    </div>
+
+                    <div class="col-12 col-md-7">
+                        <h3 class="contact-header">تواصل معنا</h3>
                         <form>
                             <div class="row mt-4">
-                                <div class="col-md-6">
-                                    <label>عنوان التدوينة</label>
-                                    <input type="text" class="form-control mb-3">
+                                <div class="col">
+                                    <input type="email" class="form-control" placeholder="البريد الإلكتروني">
                                 </div>
-                                <div class="col-md-6">
-                                    <label>الصورة</label>
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="customFile">
-                                        <label class="custom-file-label" for="customFile">إختر صورة</label>
-                                    </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="الاسم">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <label class="mt-4">تفاصيل التدوينة</label>
-                                    <textarea name="message" required placeholder="النص" cols="30" rows="5" class="form-control"></textarea>
+                                    <textarea name="message" required placeholder="نص الرسالة" cols="30" rows="5" class="form-control mt-4"></textarea>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-light custom-btn mt-4">إضافة التدوينة</button>
-                        </form>
+                            <button type="submit" class="btn btn-light custom-btn mt-4">أرسل الرسالة</button>
+                        </form>                        
                     </div>
                 </div>
             </div>

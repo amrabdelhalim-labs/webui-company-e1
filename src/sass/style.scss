@@ -1,5 +1,8 @@
 @use 'variables' as *;
 
+@forward './projects.scss';
+@forward './blog.scss';
+
 @font-face {
     font-family: "cairoFont";
     src: url(../fonts/Cairo-Regular.ttf);
@@ -297,8 +300,8 @@ footer {
     }
 
     .form {
-        margin-right: 48px;
-        margin-left: 48px;
+        margin-right: 30%;
+        margin-left: 30%;
 
         input {
             background-color: #202020;
@@ -371,6 +374,13 @@ footer {
                     font-size: 20px;
                 }
             }
+        }
+    }
+
+    footer {
+        .form {
+            margin-right: 25%;
+            margin-left: 25%;
         }
     }
 }

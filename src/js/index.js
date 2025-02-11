@@ -24,28 +24,36 @@ $(function() {
 document.addEventListener('DOMContentLoaded', function () {
     let currentImage;
 
-    document.querySelectorAll('a.thumbnail').forEach((thumbnail, index) => {
-        thumbnail.setAttribute('data-image-id', index + 1);
-        thumbnail.addEventListener('click', function (event) {
-            event.preventDefault();
-            currentImage = index + 1;
-            updateGallery(thumbnail);
+    const thumbnails = document.querySelectorAll('a.thumbnail');
+    const showNextImage = document.getElementById('show-next-image');
+    const showPreviousImage = document.getElementById('show-previous-image');
+
+    if (thumbnails.length > 0) {
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.setAttribute('data-image-id', index + 1);
+            thumbnail.addEventListener('click', function (event) {
+                event.preventDefault();
+                currentImage = index + 1;
+                updateGallery(thumbnail);
+            });
         });
-    });
+    }
 
-    document.getElementById('show-next-image').addEventListener('click', function () {
-        if (currentImage < document.querySelectorAll('a.thumbnail').length) {
-            currentImage++;
-            updateGallery(document.querySelector(`a.thumbnail[data-image-id="${currentImage}"]`));
-        }
-    });
+    if (showNextImage && showPreviousImage) {
+        showNextImage.addEventListener('click', function () {
+            if (currentImage < thumbnails.length) {
+                currentImage++;
+                updateGallery(document.querySelector(`a.thumbnail[data-image-id="${currentImage}"]`));
+            }
+        });
 
-    document.getElementById('show-previous-image').addEventListener('click', function () {
-        if (currentImage > 1) {
-            currentImage--;
-            updateGallery(document.querySelector(`a.thumbnail[data-image-id="${currentImage}"]`));
-        }
-    });
+        showPreviousImage.addEventListener('click', function () {
+            if (currentImage > 1) {
+                currentImage--;
+                updateGallery(document.querySelector(`a.thumbnail[data-image-id="${currentImage}"]`));
+            }
+        });
+    }
 
     function updateGallery(thumbnail) {
         const title = thumbnail.getAttribute('data-bs-title');
@@ -58,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function disableButtons() {
-        const totalImages = document.querySelectorAll('a.thumbnail').length;
+        const totalImages = thumbnails.length;
         document.getElementById('show-previous-image').style.display = currentImage === 1 ? 'none' : 'inline-block';
         document.getElementById('show-next-image').style.display = currentImage === totalImages ? 'none' : 'inline-block';
     }

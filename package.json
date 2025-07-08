@@ -13,7 +13,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --mode development",
-    "build": "webpack serve --mode production"
+    "build": "webpack --mode production"
   },
   "devDependencies": {
     "bootstrap": "^5.3.3",
